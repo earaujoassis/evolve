@@ -1,7 +1,7 @@
 
 # Evolve: a C library for metaheuristics algorithms
 
-Version 0.0.9 // Copyright 2012 Éwerton Assis (earaujoassis at gmail dot com)
+Version 0.0.9 // Copyright 2012-2013 Ewerton Assis (earaujoassis at gmail dot com).
 
 Please refer to the included **LICENCE file** for terms of use.
 
