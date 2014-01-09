@@ -1,5 +1,7 @@
+Evolve
+======
 
-# Evolve: a C library for metaheuristics algorithms
+A C library for metaheuristics algorithms.
 
 Version 0.0.9 // Copyright 2012-2014 Ewerton Assis (earaujoassis at gmail dot com).
 
