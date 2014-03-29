@@ -20,6 +20,6 @@ stubs. The metaheuristics implemented are:
 
 ## License
 
-Please refer to the included *LICENCE file* for terms of use.
+Please refer to the included *LICENSE file* for terms of use.
 
 Apache License, Version 2.0. Copyright 2011-2014 &copy; Ewerton Assis.
