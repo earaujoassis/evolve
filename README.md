@@ -26,7 +26,7 @@ stubs. The metaheuristics implemented are:
 
 ## Dependencies
 
- * GSL (GNU Scientific Library) --- http://www.gnu.org/software/gsl/
+ * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/)
 
 ## License
 
