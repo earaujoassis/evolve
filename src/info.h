@@ -1,0 +1,44 @@
+// Copyright 2011-2014 Ewerton Assis
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#ifndef __evolve_info_h__
+#define __evolve_info_h__
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
+void
+print_algo_info (const char *algo_name,
+                 const char *problem_name,
+                 size_t generations,
+                 size_t pop_size,
+                 unsigned long int seed);
+
+void
+print_real_pop (const real_pop_t *population,
+                const stats_t *global_stats);
+
+void
+print_int_pop (const int_pop_t *population,
+               const stats_t *global_stats);
+
+void
+print_real_chrom (const real_chrom_t *individual);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
+
+#endif // __evolve_info_h__
