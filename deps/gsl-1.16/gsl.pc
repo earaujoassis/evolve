@@ -1,0 +1,11 @@
+prefix=/home/earaujoassis/projects/evolvecode/evolve/build/deps
+exec_prefix=/home/earaujoassis/projects/evolvecode/evolve/build/deps
+libdir=/home/earaujoassis/projects/evolvecode/evolve/build/deps/lib
+includedir=/home/earaujoassis/projects/evolvecode/evolve/build/deps/include
+GSL_CBLAS_LIB=-lgslcblas
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 1.16
+Libs: -L/home/earaujoassis/projects/evolvecode/evolve/build/deps/lib -lgsl ${GSL_CBLAS_LIB} -lm -lm 
+Cflags: -I/home/earaujoassis/projects/evolvecode/evolve/build/deps/include

@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <stdlib.h>
+#include <stdio.h>
+
 #include "rng.h"
 #include "repr_integer.h"
 #include "repr_real.h"

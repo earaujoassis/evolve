@@ -19,6 +19,9 @@
 extern "C" {
 #endif // __cplusplus
 
+#include <stdlib.h>
+#include <stdio.h>
+
 typedef struct {
   unsigned short int *vector;
   size_t size;

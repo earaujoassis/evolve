@@ -21,6 +21,9 @@
 extern "C" {
 #endif // __cplusplus
 
+#include "repr_integer.h"
+#include "stats.h"
+
 #define IVFGA_DEFAULT_XOVER_POINTS      10
 #define IVFGA_SUPER_PARENTS             population->size * 0.5
 

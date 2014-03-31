@@ -19,6 +19,8 @@
 extern "C" {
 #endif // __cplusplus
 
+#include "repr_real.h"
+
 typedef struct {
   double max_fitness;
   double ave_fitness;
