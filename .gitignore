@@ -2,4 +2,9 @@
 *.a
 *~
 *.pyc
+*.la
+*.lai
+*.lo
+*.so
+*.so.*
 build/
