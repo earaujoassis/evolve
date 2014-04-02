@@ -18,7 +18,7 @@
 #include "evolve_permutation.h"
 
 void
-inversion_operator (evolve_real_chrom_t *chrom)
+evolve_inversion_operator (evolve_real_chrom_t *chrom)
 {
   size_t i, j;
   double aux;

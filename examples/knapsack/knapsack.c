@@ -15,6 +15,7 @@
 #include "utils/settings.h"
 
 #include <evolve/evolve_ivfga.h>
+#include <evolve/evolve_info.h>
 
 #include "utils/fitness.h"
 #include "utils/parser.h"

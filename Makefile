@@ -11,6 +11,7 @@ build:
 	mkdir -p build/obj
 	mkdir -p build/lib
 	mkdir -p build/include
+	mkdir -p build/include/evolve
 	(cd src && make)
 
 examples:

@@ -15,6 +15,9 @@
 #ifndef __knapsack_fitness_h__
 #define __knapsack_fitness_h__
 
+#include <evolve/evolve_rng.h>
+#include <evolve/evolve_stats.h>
+
 #include "support.h"
 
 static knapsack_t *local_problem;

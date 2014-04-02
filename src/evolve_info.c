@@ -34,7 +34,7 @@ evolve_print_algo_info (const char *algo_name,
   printf ("Population size: %d\n", pop_size);
 }
 
-static void
+void
 evolve_print_common_info (const evolve_stats_t *global_stats,
                           const evolve_stats_t *local_stats)
 {

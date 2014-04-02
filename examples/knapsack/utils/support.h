@@ -15,6 +15,8 @@
 #ifndef __knapsack_support_h__
 #define __knapsack_support_h__
 
+#include <stdlib.h>
+
 typedef struct {
   size_t items;  
   size_t compartments;
@@ -55,4 +57,3 @@ del_knapsack (knapsack_t *problem)
 }
 
 #endif
-

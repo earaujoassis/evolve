@@ -12,10 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "evolve_common.h"
+#ifndef __evolve_common_h__
+#define __evolve_common_h__
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
 
 int
-evolve_mock_check ()
-{
-  return 1;
+evolve_mock_check ();
+
+#ifdef __cplusplus
 }
+#endif // __cplusplus
+
+#endif // __evolve_common_h__

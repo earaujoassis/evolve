@@ -171,8 +171,8 @@ evolve_ivfrkgaes (evolve_real_pop_t *population,
 {
   size_t i;
   evolve_stats_t *stats = evolve_init_stats ();
-  apply_real_pop_fitness (population, fitness_function);
-  reset_real_pop_stats (population, stats);
+  evolve_apply_real_pop_fitness (population, fitness_function);
+  evolve_reset_real_pop_stats (population, stats);
   global_number_points = evolve_ivfrkgaes_number_points (population->individuals[0]->size);
   do
     {

@@ -30,6 +30,9 @@ evolve_print_algo_info (const char *algo_name,
                         size_t generations,
                         size_t pop_size,
                         unsigned long int seed);
+void
+evolve_print_common_info (const evolve_stats_t *global_stats,
+                          const evolve_stats_t *local_stats);
 
 void
 evolve_print_real_pop (const evolve_real_pop_t *population,
