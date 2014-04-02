@@ -24,9 +24,10 @@ stubs. The metaheuristics implemented are:
 * Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/ivfrkgaes.h)
 * Random-key Genetic Algorithm/Evolution Strategy (evolve/rkgaes.h)
 
-## Dependencies
+## Dependencies (available on this package)
 
- * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/) &mdash; It is already available on this package.
+ * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/)
+ * [Jansson](http://www.digip.org/jansson/)
 
 ## License
 
