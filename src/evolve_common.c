@@ -11,3 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+#ifndef MOCK_CHECK
+#define MOCK_CHECK
+
+int
+evolve_mock_check ()
+{
+  return 1;
+}
+
+#endif

@@ -11,3 +11,27 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+#ifndef __evolve_rng_h__
+#define __evolve_rng_h__
+
+#include <gsl/gsl_rng.h>
+#include <gsl/gsl_randist.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
+gsl_rng *rng;
+
+void
+evolve_set_rng (unsigned long int seed);
+
+void
+evolve_tear_rng ();
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
+
+#endif // __evolve_rng_h__

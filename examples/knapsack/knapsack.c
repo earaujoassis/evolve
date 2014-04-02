@@ -13,7 +13,9 @@
 // limitations under the License.
 
 #include "utils/settings.h"
-#include "../src/ivfga.h"
+
+#include <evolve/evolve_ivfga.h>
+
 #include "utils/fitness.h"
 #include "utils/parser.h"
 
@@ -22,8 +24,8 @@ main (int argc, char **argv)
 {
   int instances, counter;
   knapsack_t *problem;
-  int_pop_t *population;
-  stats_t *stats;
+  evolve_int_pop_t *population;
+  evolve_stats_t *stats;
 
   while(scanf("%d\n", &instances) != EOF)
     for(counter = 0; counter < instances; counter++)
@@ -33,17 +35,17 @@ main (int argc, char **argv)
           return 0;
 
         set_problem (problem);
-        population = init_int_pop (POP_SIZE);
-        set_rng (SEED);
-        random_int_pop (population, problem->items, &check);
-        stats = int_ivfga (population, MAX_GEN, &fitness, &check);
-        tear_rng ();
-        print_common_info (stats, NULL);
-        //print_int_pop (population, stats);
-        //print_algo_info ("GA", "Multidimensional 0-1 Knapsack Problem", MAX_GEN, POP_SIZE, SEED);
-        del_stats (stats);
-        del_int_pop_indiv (population);
-        del_int_pop (population);
+        population = evolve_init_int_pop (POP_SIZE);
+        evolve_set_rng (SEED);
+        evolve_random_int_pop (population, problem->items, &check);
+        stats = evolve_int_ivfga (population, MAX_GEN, &fitness, &check);
+        evolve_tear_rng ();
+        evolve_print_common_info (stats, NULL);
+        //evolve_print_int_pop (population, stats);
+        //evolve_print_algo_info ("GA", "Multidimensional 0-1 Knapsack Problem", MAX_GEN, POP_SIZE, SEED);
+        evolve_del_stats (stats);
+        evolve_del_int_pop_indiv (population);
+        evolve_del_int_pop (population);
 
         del_knapsack (problem);
       }

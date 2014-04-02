@@ -7,4 +7,5 @@
 *.lo
 *.so
 *.so.*
+*.gch
 build/

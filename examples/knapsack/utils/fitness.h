@@ -26,7 +26,7 @@ set_problem (knapsack_t *problem)
 }
 
 int
-is_subjected_original (int_chrom_t *chrom)
+is_subjected_original (evolve_int_chrom_t *chrom)
 {
   size_t compartment, item;
   unsigned long int total_weight;
@@ -43,7 +43,7 @@ is_subjected_original (int_chrom_t *chrom)
 }
 
 int
-is_subjected (int_chrom_t *chrom)
+is_subjected (evolve_int_chrom_t *chrom)
 {
   size_t item, compartment;
   size_t compartments = local_problem->compartments;
@@ -68,7 +68,7 @@ is_subjected (int_chrom_t *chrom)
 }
 
 void
-mutate (int_chrom_t *chrom)
+mutate (evolve_int_chrom_t *chrom)
 {
   size_t point = gsl_rng_uniform_int (rng, chrom->size - 1);
   while (!chrom->vector[point]) /* chrom->vector[point] != 1 */
@@ -77,7 +77,7 @@ mutate (int_chrom_t *chrom)
 }
 
 double
-fitness (int_chrom_t *chrom)
+fitness (evolve_int_chrom_t *chrom)
 {
   size_t i;
   unsigned long int fitness = 0;
@@ -88,7 +88,7 @@ fitness (int_chrom_t *chrom)
 }
 
 int
-check (int_chrom_t *chrom)
+check (evolve_int_chrom_t *chrom)
 {
   while (!is_subjected_original (chrom))
     mutate (chrom);

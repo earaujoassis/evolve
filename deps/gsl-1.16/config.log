@@ -547,7 +547,7 @@ configure:12005: $? = 0
 configure:12005: result: yes
 configure:12011: checking for _doprnt
 configure:12011: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccmjviEM.o: In function `main':
+/tmp/ccFViiel.o: In function `main':
 /home/earaujoassis/projects/evolvecode/evolve/deps/gsl-1.16/conftest.c:60: undefined reference to `_doprnt'
 collect2: error: ld returned 1 exit status
 configure:12011: $? = 1

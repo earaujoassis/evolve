@@ -1,11 +1,10 @@
-# Examples Makefile
+# examples Makefile
 
 CC=gcc
-CINCLUDES=-I../build/deps/include -I../src
-CLIBRARIES=-L../build/deps/lib -lgsl -lgslcblas -lm
-CFILES=
+CC_INCLUDES=-I../build/deps/include -I../build/include
+CC_LIBRARIES=-L../build/deps/lib -L../build/lib -lgsl -lgslcblas -lm
+
 all:
 	$(CC) knapsack/knapsack.c -o bin/knapsack $(CINCLUDES) $(CLIBRARIES) $(CFILES)
 clean:
 	rm -f bin/knapsack
-

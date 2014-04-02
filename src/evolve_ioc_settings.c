@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2013-2014 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,3 +11,19 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+#include <stdlib.h>
+#include <stdarg.h>
+
+#include "evolve_ioc_settings.h"
+
+evolve_ioc_settings_t **
+evolve_ioc_init (size_t seed,
+                 size_t pop_size,
+                 size_t max_gen,
+                 void (*selection_function)(int,...),
+                 void (*breeding_function)(int,...),
+                 void (*solution_function)(int,...))
+{
+
+}
