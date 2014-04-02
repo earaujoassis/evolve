@@ -16,10 +16,8 @@
 #define __knapsack_settings_h__
 
 #define SEED               987654
-#define MAX_GEN            50
+#define MAX_GEN            100
 #define POP_SIZE           10
-#define XOVER_POINTS       5
 #define MUTATION_RATE      0.8
-#define ELITIST_POLICY
 
 #endif

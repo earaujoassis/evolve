@@ -18,7 +18,7 @@
 #include <evolve/evolve_rng.h>
 #include <evolve/evolve_stats.h>
 
-#include "support.h"
+#include "support.c"
 
 static knapsack_t *local_problem;
 
@@ -99,4 +99,3 @@ check (evolve_int_chrom_t *chrom)
 }
 
 #endif
-

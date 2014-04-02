@@ -25,7 +25,7 @@ evolve_real_delta_mutation (evolve_real_chrom_t *chrom,
 {
   int i;
   for (i = 0; i < chrom->size; i++)
-    if (gsl_ran_flat (rng, 0, 100) < DEFAULT_MUTATION_RATE)
+    if (gsl_ran_flat (rng, 0, 100) < MUTATION_RATE)
       if (gsl_ran_flat (rng, 0, 100) < 50.0)
         chrom->vector[i] += gsl_ran_flat (rng, 0, step_size);
       else
@@ -39,7 +39,7 @@ evolve_real_gaussian_mutation (evolve_real_chrom_t *chrom,
   int i;
   double sigma = step_size / sqrt (2 / M_PI);
   for (i = 0; i < chrom->size; i++)
-    if (gsl_ran_flat (rng, 0, 100) < DEFAULT_MUTATION_RATE)
+    if (gsl_ran_flat (rng, 0, 100) < MUTATION_RATE)
       chrom->vector[i] += gsl_ran_gaussian (rng, sigma);
 }
 

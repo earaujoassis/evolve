@@ -18,7 +18,7 @@
 #include <stdlib.h>
 
 typedef struct {
-  size_t items;  
+  size_t items;
   size_t compartments;
   unsigned long int *values;
   unsigned long int *capacity;

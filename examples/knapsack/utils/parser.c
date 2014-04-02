@@ -15,7 +15,7 @@
 #ifndef __knapsack_parser_h__
 #define __knapsack_parser_h__
 
-#include "support.h"
+#include "support.c"
 
 knapsack_t *
 init_instance (FILE *stream)
@@ -48,4 +48,3 @@ init_instance (FILE *stream)
 }
 
 #endif
-

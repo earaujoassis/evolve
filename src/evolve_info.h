@@ -20,6 +20,10 @@
 #include "evolve_repr_real.h"
 #include "evolve_stats.h"
 
+#ifndef GENES_OUTPUT_LIMIT
+#define GENES_OUTPUT_LIMIT      10
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus

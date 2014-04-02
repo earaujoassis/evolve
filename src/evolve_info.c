@@ -27,11 +27,11 @@ evolve_print_algo_info (const char *algo_name,
                         size_t pop_size,
                         unsigned long int seed)
 {
-  printf ("Algorithm name: %s\n", algo_name);
-  printf ("Problem (optimization objective): %s\n", problem_name);
-  printf ("Simulation time limit (# generations): %ld\n", generations);
-  printf ("Random number seed (positive integer): %ld\n", seed);
-  printf ("Population size: %d\n", pop_size);
+  printf ("%s\n", algo_name);
+  printf ("  Problem (optimization objective): %s\n", problem_name);
+  printf ("  Simulation time limit (# generations): %ld\n", generations);
+  printf ("  Random number seed (positive integer): %ld\n", seed);
+  printf ("  Population size: %d\n", pop_size);
 }
 
 void
@@ -39,10 +39,10 @@ evolve_print_common_info (const evolve_stats_t *global_stats,
                           const evolve_stats_t *local_stats)
 {
   if (global_stats != NULL)
-    printf ("Global fitness:\tbest = %.15lf,\tmean = %.15lf,\tworst = %.15lf\n", \
+    printf ("  Global fitness:\tbest = %.15lf,\tmean = %.15lf,\tworst = %.15lf\n", \
       global_stats->max_fitness, global_stats->ave_fitness, global_stats->min_fitness);
   if (local_stats != NULL)
-    printf ("Local fitness:\tbest = %.15lf,\tmean = %.15lf,\tworst = %.15lf\n", \
+    printf ("  Local fitness:\tbest = %.15lf,\tmean = %.15lf,\tworst = %.15lf\n", \
       local_stats->max_fitness, local_stats->ave_fitness, local_stats->min_fitness);
 }
 
@@ -54,14 +54,23 @@ evolve_print_real_pop (const evolve_real_pop_t *population,
   evolve_stats_t *local_stats = evolve_init_stats ();
   evolve_reset_real_pop_stats (population, local_stats);
   evolve_print_common_info (global_stats, local_stats);
-  printf ("Population data after %ld births (generation %d):\n", population->birthcounter, population->generation);
-  printf ("Indiv \t bithdate \t fitness \t\t\t gene values\n");
+  printf ("  Population data after %ld births (generation %d):\n", population->birthcounter, population->generation);
+  printf ("  Indiv \t bithdate \t fitness \t\t\t gene values\n");
   for (i = 0; i < population->size; i++)
     {
       evolve_real_chrom_t *individual = population->individuals[i];
-      printf ("%3d \t %8d \t %.15lf \t\t", i + 1, individual->birthdate, individual->fitness);
-      for (j = 0; j < individual->size; j++)
-        printf ("%.15lf  ", individual->vector[j]);
+      printf ("\t %3d \t %8d \t %.5lf \t\t", i + 1, individual->birthdate, individual->fitness);
+      if (individual->size > GENES_OUTPUT_LIMIT)
+        {
+          for (j = 0; j < GENES_OUTPUT_LIMIT; j++)
+            printf ("%.15lf  ", individual->vector[j]);
+          printf("...");
+        }
+      else
+        {
+          for (j = 0; j < individual->size; j++)
+            printf ("%.15lf  ", individual->vector[j]);
+        }
       printf ("\n");
     }
   printf ("\n");
@@ -76,14 +85,23 @@ evolve_print_int_pop (const evolve_int_pop_t *population,
   evolve_stats_t *local_stats = evolve_init_stats ();
   evolve_reset_int_pop_stats (population, local_stats);
   evolve_print_common_info (global_stats, local_stats);
-  printf ("Population data after %ld births (generation %d):\n", population->birthcounter, population->generation);
-  printf ("Indiv \t bithdate \t fitness \t\t\t gene values\n");
+  printf ("  Population data after %ld births (generation %d):\n", population->birthcounter, population->generation);
+  printf ("  Indiv \t bithdate \t fitness \t\t gene values\n");
   for (i = 0; i < population->size; i++)
     {
       evolve_int_chrom_t *individual = population->individuals[i];
-      printf ("%3d \t %8d \t %.15lf \t\t", i + 1, individual->birthdate, individual->fitness);
-      for (j = 0; j < individual->size; j++)
-        printf ("%1d", individual->vector[j]);
+      printf ("   %3d \t       %8d \t   %5.5lf    \t\t", i + 1, individual->birthdate, individual->fitness);
+      if (individual->size > GENES_OUTPUT_LIMIT)
+        {
+          for (j = 0; j < GENES_OUTPUT_LIMIT; j++)
+            printf ("%1d", individual->vector[j]);
+          printf("...");
+        }
+      else
+        {
+          for (j = 0; j < individual->size; j++)
+            printf ("%1d", individual->vector[j]);
+        }
       printf ("\n");
     }
   printf ("\n");
@@ -94,7 +112,7 @@ void
 evolve_print_real_chrom (const evolve_real_chrom_t *individual)
 {
   size_t i;
-  printf ("Chromosome: ");
+  printf ("  Chromosome: ");
   for (i = 0; i < individual->size; i++)
     printf ("%1.0lf ", individual->vector[i]);
   printf ("\n");

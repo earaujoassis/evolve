@@ -23,7 +23,9 @@
 extern "C" {
 #endif // __cplusplus
 
-#define DEFAULT_MUTATION_RATE      0.150
+#ifndef MUTATION_RATE
+#define MUTATION_RATE      0.150
+#endif
 
 void
 evolve_real_delta_mutation (evolve_real_chrom_t *chrom,

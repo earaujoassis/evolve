@@ -21,7 +21,7 @@ $(RELATIVE)build/include/evolve/%.h: %.h
 	cp $< $@
 
 default: $(OBJ_FILES) $(INCLUDE_FILES)
-	$(CC) -shared -Wl,-soname,$(RELATIVE)build/lib/libevolve.so.$(VERSION.MAJOR) -o $(RELATIVE)build/lib/libevolve.so.$(VERSION) $(OBJ_FILES) $(CC_LIBRARIES)
+	$(CC) -shared -Wl,-rpath='$ORIGIN' -o $(RELATIVE)build/lib/libevolve.so.$(VERSION) $(OBJ_FILES) $(CC_LIBRARIES)
 	(cp $(RELATIVE)build/lib/libevolve.so.$(VERSION) $(RELATIVE)build/lib/libevolve.so.$(VERSION.MAJOR))
 	(cp $(RELATIVE)build/lib/libevolve.so.$(VERSION) $(RELATIVE)build/lib/libevolve.so)
 	ar rc $(RELATIVE)build/lib/libevolve.a $(OBJ_FILES)

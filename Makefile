@@ -20,6 +20,7 @@ examples:
 
 default:
 	dependencies
+	build
 	examples
 
 clean:

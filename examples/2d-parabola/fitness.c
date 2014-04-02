@@ -11,15 +11,3 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-#ifndef __knapsack_settings_h__
-#define __knapsack_settings_h__
-
-#define SEED               987654
-#define MAX_GEN            50
-#define POP_SIZE           10
-#define XOVER_POINTS       5
-#define MUTATION_RATE      0.8
-#define ELITIST_POLICY
-
-#endif

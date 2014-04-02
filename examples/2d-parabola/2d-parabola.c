@@ -12,14 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef __knapsack_settings_h__
-#define __knapsack_settings_h__
+#include "settings.h"
 
-#define SEED               987654
-#define MAX_GEN            50
-#define POP_SIZE           10
-#define XOVER_POINTS       5
-#define MUTATION_RATE      0.8
-#define ELITIST_POLICY
+#include <evolve/evolve_ev.h>
+#include <evolve/evolve_info.h>
 
-#endif
+#include "fitness.c"
