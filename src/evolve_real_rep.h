@@ -12,26 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "evolve_rng.h"
+// Floating-point/Real Replacement Policies
 
-static int is_rng_set = 0;
-static const gsl_rng_type *T;
+#ifndef __evolve_real_rep_h__
+#define __evolve_real_rep_h__
 
-void
-evolve_set_rng (unsigned long int seed)
-{
-  if (is_rng_set)
-    return;
-  gsl_rng_env_setup ();
-  T = gsl_rng_default;
-  rng = gsl_rng_alloc (T);
-  gsl_rng_set (rng, seed);
-  is_rng_set = 1;
-}
+#include "evolve_repr_real.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
 
 void
-evolve_tear_rng ()
-{
-  gsl_rng_free (rng);
-  is_rng_set = 0;
+evolve_real_elitist_policy_replacement (evolve_real_pop_t *population,
+                                        evolve_real_chrom_t **offspring);
+
+#ifdef __cplusplus
 }
+#endif // __cplusplus
+
+#endif // __evolve_real_rep_h__

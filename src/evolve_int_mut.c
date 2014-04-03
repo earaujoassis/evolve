@@ -13,25 +13,14 @@
 // limitations under the License.
 
 #include "evolve_rng.h"
-
-static int is_rng_set = 0;
-static const gsl_rng_type *T;
+#include "evolve_int_mut.h"
 
 void
-evolve_set_rng (unsigned long int seed)
+evolve_per_int_mutation (evolve_int_chrom_t *chrom,
+                         double mutation_chance)
 {
-  if (is_rng_set)
-    return;
-  gsl_rng_env_setup ();
-  T = gsl_rng_default;
-  rng = gsl_rng_alloc (T);
-  gsl_rng_set (rng, seed);
-  is_rng_set = 1;
-}
-
-void
-evolve_tear_rng ()
-{
-  gsl_rng_free (rng);
-  is_rng_set = 0;
+  size_t i;
+  for (i = 0; i < chrom->size; i++)
+    if (gsl_ran_flat (rng, 0, 100) < mutation_chance)
+      chrom->vector[i] = chrom->vector[i] ? 0 : 1;
 }

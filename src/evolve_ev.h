@@ -12,28 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// EV: according to DE JONG's implementation
+
 #ifndef __evolve_ev_h__
 #define __evolve_ev_h__
-
-/* EV: according to DE JONG's implementation */
 
 #include "evolve_repr_real.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef MUTATION_RATE
-#define MUTATION_RATE      0.150
-#endif
-
-void
-evolve_real_delta_mutation (evolve_real_chrom_t *chrom,
-                            double step_size);
-
-void
-evolve_real_gaussian_mutation (evolve_real_chrom_t *chrom,
-                               double step_size);
 
 evolve_real_chrom_t *
 evolve_real_breed_ev (const evolve_real_chrom_t *parent,

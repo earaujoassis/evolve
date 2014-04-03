@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef __evolve_randomkey_h__
-#define __evolve_randomkey_h__
+// Floating-point/Real Chromosomes Selection Strategies
 
-#include <stdlib.h>
+#ifndef __evolve_real_sel_h__
+#define __evolve_real_sel_h__
 
 #include "evolve_repr_real.h"
 
@@ -23,12 +23,21 @@
 extern "C" {
 #endif // __cplusplus
 
-unsigned int *
-evolve_integer_series (size_t dimension,
-                       const evolve_real_chrom_t *chrom);
+evolve_real_chrom_t **
+evolve_real_linear_ranking (const evolve_real_pop_t *population,
+                            size_t total_selection);
+
+evolve_real_chrom_t **
+evolve_real_tournament_selection (const evolve_real_pop_t *population,
+                                  size_t tournament_size,
+                                  size_t total_selection);
+
+evolve_real_chrom_t **
+evolve_real_fitness_proportional (const evolve_real_pop_t *population,
+                                  size_t total_selection);
 
 #ifdef __cplusplus
 }
 #endif // __cplusplus
 
-#endif // __evolve_randomkey_h__
+#endif // __evolve_real_sel_h__

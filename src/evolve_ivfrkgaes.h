@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization)
+
 #ifndef __evolve_ga_es_ivf_h__
 #define __evolve_ga_es_ivf_h__
-
-/* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) */
 
 #include <stdlib.h>
 
@@ -26,9 +26,15 @@
 extern "C" {
 #endif // __cplusplus
 
+#ifndef IVFGA_SUPER_PARENTS
 #define IVFGA_SUPER_PARENTS             population->size * 0.25
+#endif
+#ifndef IVFGA_CUTOFFS_UP_BOUND
 #define IVFGA_CUTOFFS_UP_BOUND          0.3
+#endif
+#ifndef IVFGA_CUTOFFS_BOTTOM_BOUND
 #define IVFGA_CUTOFFS_BOTTOM_BOUND      0.2
+#endif
 
 evolve_real_chrom_t **
 evolve_ivfrkgaes_pselection (evolve_real_pop_t *population,

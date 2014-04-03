@@ -12,26 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "evolve_rng.h"
+// Integer Chromosomes Mutation Strategies
 
-static int is_rng_set = 0;
-static const gsl_rng_type *T;
+#ifndef __evolve_int_mut_h__
+#define __evolve_int_mut_h__
 
-void
-evolve_set_rng (unsigned long int seed)
-{
-  if (is_rng_set)
-    return;
-  gsl_rng_env_setup ();
-  T = gsl_rng_default;
-  rng = gsl_rng_alloc (T);
-  gsl_rng_set (rng, seed);
-  is_rng_set = 1;
-}
+#include <stdlib.h>
+
+#include "evolve_repr_integer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
 
 void
-evolve_tear_rng ()
-{
-  gsl_rng_free (rng);
-  is_rng_set = 0;
+evolve_per_int_mutation (evolve_int_chrom_t *chrom,
+                         double mutation_chance);
+
+#ifdef __cplusplus
 }
+#endif // __cplusplus
+
+#endif // __evolve_int_mut_h__

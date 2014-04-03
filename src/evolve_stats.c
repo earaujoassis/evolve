@@ -15,8 +15,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "evolve_repr_integer.h"
-#include "evolve_repr_real.h"
 #include "evolve_stats.h"
 
 evolve_stats_t *

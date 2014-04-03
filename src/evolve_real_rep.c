@@ -12,26 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "evolve_rng.h"
-
-static int is_rng_set = 0;
-static const gsl_rng_type *T;
+#include "evolve_real_rep.h"
 
 void
-evolve_set_rng (unsigned long int seed)
+evolve_real_elitist_policy_replacement (evolve_real_pop_t *population,
+                                        evolve_real_chrom_t **offspring)
 {
-  if (is_rng_set)
-    return;
-  gsl_rng_env_setup ();
-  T = gsl_rng_default;
-  rng = gsl_rng_alloc (T);
-  gsl_rng_set (rng, seed);
-  is_rng_set = 1;
-}
-
-void
-evolve_tear_rng ()
-{
-  gsl_rng_free (rng);
-  is_rng_set = 0;
+  size_t i, worst_point;
+  evolve_real_chrom_t *best;
+  best = evolve_best_real_chrom (population);
+  best = evolve_copy_real_chrom (best, best->birthdate);
+  evolve_del_real_pop_indiv (population);
+  for (i = 0; i < population->size; i++)
+    population->individuals[i] = offspring[i];
+  worst_point = evolve_worst_real_chrom_index (population);
+  population->individuals[worst_point] = best;
 }

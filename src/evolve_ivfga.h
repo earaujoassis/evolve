@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Genetic Algorithm with IVF (In Vitro Fertilization)
+
 #ifndef __evolve_ga_ivf_h__
 #define __evolve_ga_ivf_h__
-
-/* Genetic Algorithm with IVF (In Vitro Fertilization) */
 
 #include <stdlib.h>
 
@@ -26,8 +26,12 @@
 extern "C" {
 #endif // __cplusplus
 
+#ifndef IVFGA_DEFAULT_XOVER_POINTS
 #define IVFGA_DEFAULT_XOVER_POINTS      10
+#endif
+#ifndef IVFGA_SUPER_PARENTS
 #define IVFGA_SUPER_PARENTS             population->size * 0.5
+#endif
 
 evolve_int_chrom_t **
 evolve_ivfga_pselection (evolve_int_pop_t *population,

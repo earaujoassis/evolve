@@ -18,6 +18,7 @@
 #include <stdlib.h>
 
 #include "evolve_repr_real.h"
+#include "evolve_repr_integer.h"
 #include "evolve_stats.h"
 
 #ifndef GENES_OUTPUT_LIMIT

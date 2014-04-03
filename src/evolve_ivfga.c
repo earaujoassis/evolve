@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <stdlib.h>
-
-#include "evolve_repr_integer.h"
 #include "evolve_repr_sorting.h"
-#include "evolve_ga.h"
+#include "evolve_breed.h"
+#include "evolve_int_sel.h"
+#include "evolve_int_rec.h"
+#include "evolve_int_rep.h"
 #include "evolve_ivfga.h"
 
 evolve_int_chrom_t **
@@ -148,7 +148,7 @@ evolve_int_ivfga (evolve_int_pop_t *population,
 #ifdef TOURNAMENT_SIZE
       selection = evolve_int_tournament_selection (population, TOURNAMENT_SIZE, population->size);
 #else
-      selection = evolve_roulette_wheel_selection (population, population->size);
+      selection = evolve_int_roulette_wheel_selection (population, population->size);
 #endif
       for (i = 0; i < population->size / 2; i++)
         {
@@ -163,9 +163,9 @@ evolve_int_ivfga (evolve_int_pop_t *population,
       evolve_ivfga_manipulation (super_parents, IVFGA_SUPER_PARENTS, embryo, fitness_function, is_valid);
       free (super_parents);
 #ifdef ELITIST_POLICY
-      evolve_elitist_policy_replacement (population, offspring);
+      evolve_int_elitist_policy_replacement (population, offspring);
 #else
-      evolve_generational_replacement (population, offspring);
+      evolve_int_generational_replacement (population, offspring);
 #endif
       free (offspring);
       evolve_apply_int_pop_fitness (population, fitness_function);

@@ -12,23 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef __evolve_randomkey_h__
-#define __evolve_randomkey_h__
+// Floating-point/Real Mutation Strategies
 
-#include <stdlib.h>
+#ifndef __evolve_real_mut_h__
+#define __evolve_real_mut_h__
 
 #include "evolve_repr_real.h"
+#include "evolve_permutation.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
 
-unsigned int *
-evolve_integer_series (size_t dimension,
-                       const evolve_real_chrom_t *chrom);
+#ifndef MUTATION_RATE
+#define MUTATION_RATE      0.150
+#endif
+
+void
+evolve_real_delta_mutation (evolve_real_chrom_t *chrom,
+                            double step_size);
+
+void
+evolve_real_gaussian_mutation (evolve_real_chrom_t *chrom,
+                               double step_size);
+
+void
+evolve_real_permutation_mutation (evolve_real_chrom_t *offspring);
 
 #ifdef __cplusplus
 }
 #endif // __cplusplus
 
-#endif // __evolve_randomkey_h__
+#endif // __evolve_real_mut_h__

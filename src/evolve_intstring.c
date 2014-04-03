@@ -13,7 +13,6 @@
 // limitations under the License.
 
 #include <math.h>
-#include <stdlib.h>
 
 #include "evolve_intstring.h"
 

@@ -21,10 +21,18 @@
 extern "C" {
 #endif // __cplusplus
 
+#ifndef PROB_EXCHANGE
 #define PROB_EXCHANGE           35.0 // %
+#endif
+#ifndef PROB_INSERTION
 #define PROB_INSERTION          35.0 // %
+#endif
+#ifndef PROB_INVERSION
 #define PROB_INVERSION          10.0 // %
+#endif
+#ifndef PROB_SHIFTING
 #define PROB_SHIFTING           20.0 // %
+#endif
 
 void
 evolve_inversion_operator (evolve_real_chrom_t *chrom);

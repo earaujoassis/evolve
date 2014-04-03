@@ -12,23 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef __evolve_randomkey_h__
-#define __evolve_randomkey_h__
+// Integer Chromosomes Selection Strategies
 
-#include <stdlib.h>
+#ifndef __evolve_int_sel_h__
+#define __evolve_int_sel_h__
 
-#include "evolve_repr_real.h"
+#include "evolve_repr_integer.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
 
-unsigned int *
-evolve_integer_series (size_t dimension,
-                       const evolve_real_chrom_t *chrom);
+evolve_int_chrom_t **
+evolve_int_tournament_selection (const evolve_int_pop_t *population,
+                                 size_t tournament_size,
+                                 size_t total_selection);
+
+evolve_int_chrom_t **
+evolve_int_roulette_wheel_selection (const evolve_int_pop_t *population,
+                                     size_t total_selection);
 
 #ifdef __cplusplus
 }
 #endif // __cplusplus
 
-#endif // __evolve_randomkey_h__
+#endif // __evolve_int_sel_h__

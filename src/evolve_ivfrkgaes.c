@@ -12,16 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <stdlib.h>
-
 #include "evolve_rng.h"
-#include "evolve_stats.h"
+#include "evolve_breed.h"
 #include "evolve_repr_sorting.h"
+#include "evolve_real_sel.h"
+#include "evolve_real_rec.h"
+#include "evolve_real_mut.h"
+#include "evolve_real_rep.h"
+#include "evolve_randomkey.h"
 #include "evolve_o_rkgaes.h"
 #include "evolve_permutation.h"
 #include "evolve_rkgaes.h"
 #include "evolve_ivfrkgaes.h"
-#include "evolve_randomkey.h"
 
 static size_t global_number_points;
 
@@ -77,7 +79,7 @@ evolve_ivfrkgaes_manipulation (evolve_real_chrom_t **parents,
   evolve_real_chrom_t *offspring_one, *offspring_two;
   evolve_real_chrom_t *best;
   super_parent = evolve_copy_real_chrom (parents[0], parents[0]->birthdate);
-  birthdate = offspring->birthdate;  
+  birthdate = offspring->birthdate;
   best = NULL;
   do
     {
@@ -180,11 +182,11 @@ evolve_ivfrkgaes (evolve_real_pop_t *population,
       evolve_real_chrom_t **super_parents, *embryo;
       offspring = (evolve_real_chrom_t **) calloc (population->size, sizeof (evolve_real_chrom_t *));
       if (global_options->selection == proportional)
-        selection = evolve_fitness_proportional (population, population->size);
+        selection = evolve_real_fitness_proportional (population, population->size);
       else if (global_options->selection == tournament)
         selection = evolve_real_tournament_selection (population, TOURNAMENT_SIZE, population->size);
       else if (global_options->selection == ranking)
-        selection = evolve_linear_ranking (population, population->size);
+        selection = evolve_real_linear_ranking (population, population->size);
       for (i = 0; i < population->size / 2; i++)
         {
           offspring[2 * i] = evolve_real_breed (selection[2 * i], selection[2 * i + 1], \
@@ -197,7 +199,7 @@ evolve_ivfrkgaes (evolve_real_pop_t *population,
       super_parents = evolve_ivfrkgaes_pselection (population, IVFGA_SUPER_PARENTS);
       evolve_ivfrkgaes_manipulation (super_parents, IVFGA_SUPER_PARENTS, embryo, fitness_function, is_valid);
       free (super_parents);
-      evolve_elitist_policy_replacement (population, offspring);
+      evolve_real_elitist_policy_replacement (population, offspring);
       free (offspring);
       evolve_apply_real_pop_fitness (population, fitness_function);
 

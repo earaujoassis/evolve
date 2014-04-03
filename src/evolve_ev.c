@@ -16,32 +16,8 @@
 
 #include "evolve_rng.h"
 #include "evolve_stats.h"
-#include "evolve_repr_real.h"
+#include "evolve_real_mut.h"
 #include "evolve_ev.h"
-
-void
-evolve_real_delta_mutation (evolve_real_chrom_t *chrom,
-                            double step_size)
-{
-  int i;
-  for (i = 0; i < chrom->size; i++)
-    if (gsl_ran_flat (rng, 0, 100) < MUTATION_RATE)
-      if (gsl_ran_flat (rng, 0, 100) < 50.0)
-        chrom->vector[i] += gsl_ran_flat (rng, 0, step_size);
-      else
-        chrom->vector[i] -= gsl_ran_flat (rng, 0, step_size);
-}
-
-void
-evolve_real_gaussian_mutation (evolve_real_chrom_t *chrom,
-                               double step_size)
-{
-  int i;
-  double sigma = step_size / sqrt (2 / M_PI);
-  for (i = 0; i < chrom->size; i++)
-    if (gsl_ran_flat (rng, 0, 100) < MUTATION_RATE)
-      chrom->vector[i] += gsl_ran_gaussian (rng, sigma);
-}
 
 evolve_real_chrom_t *
 evolve_real_breed_ev (const evolve_real_chrom_t *parent,

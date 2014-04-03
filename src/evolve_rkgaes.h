@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Random-key Genetic Algorithm/Evolution Strategy
+
 #ifndef __evolve_hybrid_real_ga_es_h__
 #define __evolve_hybrid_real_ga_es_h__
-
-/* Random-key Genetic Algorithm/Evolution Strategy */
 
 #include <stdlib.h>
 
@@ -26,59 +26,17 @@
 extern "C" {
 #endif // __cplusplus
 
+#ifndef TOURNAMENT_SIZE
 #define TOURNAMENT_SIZE         5
-#define NPOINTS_XOVER           4
-#define HEAD_TOSSING            70.0
+#endif
+#ifndef REGENERATED_PERCENTAGE
 #define REGENERATED_PERCENTAGE  0.20
-
-void
-evolve_real_uniform_xover (const evolve_real_chrom_t *parent_one,
-                           const evolve_real_chrom_t *parent_two,
-                           evolve_real_chrom_t *offspring,
-                           double parameterized);
-
-void
-evolve_real_onepoint_xover (const evolve_real_chrom_t *parent_one,
-                            const evolve_real_chrom_t *parent_two,
-                            evolve_real_chrom_t *offspring);
-
-void
-evolve_real_npoint_xover (const evolve_real_chrom_t *parent_one,
-                          const evolve_real_chrom_t *parent_two,
-                          evolve_real_chrom_t *offspring,
-                          size_t num_points,
-                          size_t *selected_points);
-
-void
-evolve_permutation_mutation (evolve_real_chrom_t *offspring);
+#endif
 
 void
 evolve_random_generated_individuals (evolve_real_pop_t *population,
                                      double population_percentage,
                                      int (*is_valid) (evolve_real_chrom_t *));
-
-evolve_real_chrom_t **
-evolve_linear_ranking (const evolve_real_pop_t *population,
-                       size_t total_selection);
-
-evolve_real_chrom_t **
-evolve_real_tournament_selection (const evolve_real_pop_t *population,
-                                  size_t tournament_size,
-                                  size_t total_selection);
-
-evolve_real_chrom_t **
-evolve_fitness_proportional (const evolve_real_pop_t *population,
-                             size_t evolve_total_selection);
-
-evolve_real_chrom_t *
-evolve_real_breed (const evolve_real_chrom_t *parent_one,
-                   const evolve_real_chrom_t *parent_two,
-                   size_t birthdate,
-                   int (*is_valid) (evolve_real_chrom_t *));
-
-void
-evolve_elitist_policy_replacement (evolve_real_pop_t *population,
-                                   evolve_real_chrom_t **offspring);
 
 evolve_stats_t *
 evolve_rkgaes (evolve_real_pop_t *population,
