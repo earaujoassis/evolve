@@ -1,6 +1,6 @@
 # Evolve
 
-> A C library for metaheuristics algorithms.
+> A library for Evolutionary Computation algorithms
 
 **WARNING**: CURRENTLY NOT READY FOR USE.
 
