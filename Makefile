@@ -1,28 +1,27 @@
 # Top-level Makefile
 
-.PHONY: dependencies build examples default clean
+.PHONY: dependencies build examples default clean all
 
 dependencies:
 	mkdir -p build
 	mkdir -p build/deps
-	(cd deps && make)
+	$(MAKE) -C deps
 
 build:
 	mkdir -p build/obj
 	mkdir -p build/lib
 	mkdir -p build/include
 	mkdir -p build/include/evolve
-	(cd src && make)
+	$(MAKE) -C core
 
 examples:
 	mkdir -p build/examples
-	(cd examples && make)
+	$(MAKE) -C examples
 
-default:
-	dependencies
-	build
-	examples
+all: dependencies build
+
+default: all
 
 clean:
 	rm -rf build
-	(cd deps && make clean)
+	$(MAKE) -C deps clean

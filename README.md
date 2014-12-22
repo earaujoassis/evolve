@@ -22,11 +22,11 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
 ## Paradigms and Metaheuristics implemented by include file
 
-* EV (evolve/ev.h)
-* Canonical Genetic Algorithm (evolve/ga.h)
-* Genetic Algorithm with IVF (In Vitro Fertilization) (evolve/ivfga.h)
-* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/ivfrkgaes.h)
-* Random-key Genetic Algorithm/Evolution Strategy (evolve/rkgaes.h)
+* EV (evolve_ev.h)
+* Canonical Genetic Algorithm (evolve_ga.h)
+* Genetic Algorithm with IVF (In Vitro Fertilization) (evolve_ivfga.h)
+* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve_ivfrkgaes.h)
+* Random-key Genetic Algorithm/Evolution Strategy (evolve_rkgaes.h)
 
 ## Dependencies (available on this package)
 
@@ -36,7 +36,8 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 ## License
 
 Please refer to the included *LICENSE file* for terms of use. Some examples used to showcase this project
-are based upon instances available on scientific literature and those instances should be disregarded of
-this *LICENSE*; they have their own copyright and license for distribution.
+are based upon instances available on scientific literature; thus those instances should be disregarded of
+this *LICENSE*; they have their own copyright and license for distribution – the same applies to projects
+located inside the `deps` folder.
 
 Apache License, Version 2.0. Copyright 2011-2014 &copy; Ewerton Assis.

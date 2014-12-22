@@ -1,12 +1,23 @@
 # examples Makefile
 
-RELATIVE=../
+include ../Makefile.am
+
+BUILDPATH=$(realpath ..)/build
+DEPPATH=$(BUILDPATH)/deps
+LIBPATH=$(BUILDPATH)/lib
+INCLUDEPATH=$(BUILDPATH)/include
+EXAMPLESPATH=$(BUILDPATH)/examples
+
 CC=gcc
-CC_INCLUDES=-I$(RELATIVE)build/deps/include -I$(RELATIVE)build/include
-CC_LIBRARIES=-L$(RELATIVE)build/lib -L$(RELATIVE)build/deps/lib -lgsl -lgslcblas -lm -levolve
+CC_INCLUDES=-I$(DEPPATH)/include -I$(INCLUDEPATH)
+CC_LIBRARIES=-L$(LIBPATH) -L$(DEPPATH)/lib -lgsl -lgslcblas -lm -levolve
+
+.PHONY: all default clean
 
 all:
-	$(shell export LD_LIBRARY_PATH=$(shell readlink -f $(RELATIVE))/build/lib:$(shell readlink -f $(RELATIVE))/build/deps/lib:$($$LD_LIBRARY_PATH))
-	$(CC) knapsack/knapsack.c -o ../build/examples/knapsack $(CC_INCLUDES) $(CC_LIBRARIES)
+	$(CC) knapsack/knapsack.c -o $(EXAMPLESPATH)/knapsack $(CC_INCLUDES) $(CC_LIBRARIES)
+
+default: all
+
 clean:
-	rm -f bin/knapsack
+	rm -f $(EXAMPLESPATH)/knapsack
