@@ -1,0 +1,26 @@
+{
+  "name": "evolve",
+  "version": "0.2",
+  "homepage": "https://github.com/earaujoassis/evolve",
+  "authors": [
+    "Ewerton Assis <earaujoassis@gmail.com>"
+  ],
+  "description": "A library for Evolutionary Computation algorithms",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation": "*",
+    "octicons": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ]
+}

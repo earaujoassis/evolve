@@ -1,0 +1,16 @@
+# Site settings
+title: Evolve
+email: hello@dearaujoassis.com
+description: A library for Evolutionary Computation algorithms
+baseurl: "/evolve"
+url: "http://earaujoassis.github.io"
+creators_website: "http://dearaujoassis.com"
+twitter_username: earaujoassis
+github_username:  earaujoassis
+github_project: evolve
+source: .
+destination: ./_build
+
+# Build settings
+exclude: ['Gemfile', 'Gemfile.lock', 'bower.json', 'README.md']
+markdown: kramdown
