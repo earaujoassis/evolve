@@ -4,8 +4,8 @@
 .libs
 .deps
 .git
-Makefile
-Makefile.in
+{gsl,jansson}/Makefile
+{gsl,jansson}/Makefile.in
 aclocal.m4
 autom4te.cache
 config.guess
