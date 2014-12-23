@@ -1,0 +1,4 @@
+# www.robotstxt.org/
+
+User-agent: *
+Sitemap: http://earaujoassis.github.io/evolve/sitemap.xml

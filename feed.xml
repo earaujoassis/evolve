@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Evolve</title>
+    <description>A library for Evolutionary Computation algorithms</description>
+    <link>http://earaujoassis.github.io/evolve/</link>
+    <atom:link href="http://earaujoassis.github.io/evolve/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 23 Dec 2014 17:10:45 -0200</pubDate>
+    <lastBuildDate>Tue, 23 Dec 2014 17:10:45 -0200</lastBuildDate>
+    <generator>Jekyll v2.5.2</generator>
+    
+  </channel>
+</rss>

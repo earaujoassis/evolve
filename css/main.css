@@ -1,0 +1,264 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 15px; }
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block; }
+
+figcaption {
+  font-size: 14px; }
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 30px; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+/**
+ * Links
+ */
+a {
+  color: #2a7ae2;
+  text-decoration: none; }
+  a:visited {
+    color: #1756a9; }
+  a:hover {
+    color: #111;
+    text-decoration: underline; }
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eef; }
+
+code {
+  padding: 1px 5px; }
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll; }
+  pre > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0; }
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(90% - (30px * 2));
+  max-width: calc(90% - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px; }
+  @media screen and (max-width: 90%) {
+    .wrapper {
+      max-width: -webkit-calc(90% - (30px));
+      max-width: calc(90% - (30px));
+      padding-right: 15px;
+      padding-left: 15px; } }
+
+/**
+ * Clearfix
+ */
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/**
+ * Icons
+ */
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle; }
+  .icon > svg path {
+    fill: #828282; }
+
+/**
+ * Original Style
+ */
+@font-face {
+  font-family: 'Qlassik Bold';
+  src: url(../fonts/qlassikbold_tb-webfont.eot);
+  src: url(../fonts/qlassikbold_tb-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/qlassikbold_tb-webfont.woff) format("woff"), url(../fonts/qlassikbold_tb-webfont.ttf) format("truetype"), url(../fonts/qlassikbold_tb-webfont.svg#qlassik_boldregular) format("svg");
+  font-weight: bold;
+  font-style: normal; }
+body {
+  background: #f3f3f3;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-family: "Open Sans", sans-serif; }
+
+p {
+  font-weight: 300; }
+
+.main {
+  position: relative; }
+
+.logo-branding {
+  position: relative;
+  top: -17px;
+  margin: 0;
+  padding-left: 95px;
+  min-height: 78px;
+  background: no-repeat center left;
+  background-image: url(data:image/png;base64,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);
+  /* Image dimension: 79x78 */
+  color: #fff;
+  font-family: "Qlassik Bold", sans-serif;
+  font-weight: bold;
+  font-size: 4.3rem; }
+  .logo-branding a {
+    color: inherit; }
+    .logo-branding a:hover, .logo-branding a:visited {
+      color: inherit;
+      text-decoration: none; }
+
+.button.github {
+  margin: 0;
+  padding: 0.5rem 1.4rem;
+  border-radius: 4px;
+  background: #f3f3f3;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); }
+  .button.github .octicon {
+    color: #333; }
+
+.main-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px 0;
+  max-height: 127px;
+  border-bottom: 5px solid #74a174;
+  background: #82b482; }
+  .main-header .common-wrapper {
+    padding: 0; }
+  .main-header .button.github {
+    position: relative;
+    top: 19px; }
+
+.main-footer {
+  padding: 50px 0 40px; }
+  .main-footer .closing-words {
+    color: #b6b6b6; }
+    .main-footer .closing-words a {
+      color: #777; }
+  .main-footer .button.github {
+    background: #dbdbdb;
+    box-shadow: none; }
+
+.main-container {
+  margin-top: 162px; }
+
+.main-calling {
+  text-align: center; }
+  .main-calling .title {
+    margin: 0;
+    font-size: 3.3rem;
+    font-weight: 400; }
+  .main-calling .tagline {
+    margin: 0;
+    font-size: 2.9rem;
+    font-weight: 300; }
+  .main-calling .explanation {
+    font-size: 1.8rem;
+    line-height: 1.2; }
+  .main-calling .button {
+    margin: 30px 0;
+    padding: 0.5rem 1.4rem;
+    border-radius: 4px;
+    background: #a7dbd8;
+    color: #444;
+    font-weight: 800 !important; }
+
+.experiment-context {
+  text-align: center; }
+  .experiment-context .mockup img {
+    display: inline-block;
+    max-width: 100% !important;
+    height: auto; }
+  .experiment-context .mockup figcaption {
+    display: inline-block;
+    max-width: 1004px;
+    width: 100%;
+    color: #aeaeae;
+    font-style: italic;
+    text-align: right; }
+
+.final-moment h2 {
+  font-size: 1.5rem;
+  font-weight: 300; }
