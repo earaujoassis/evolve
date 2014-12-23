@@ -1,12 +1,2 @@
 .DS_Store
 build
-*.o
-*.a
-*~
-*.pyc
-*.la
-*.lai
-*.lo
-*.so
-*.so.*
-*.gch
