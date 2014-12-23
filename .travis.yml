@@ -3,6 +3,8 @@ branches:
     - master
 language: c
 compiler: gcc
+install:
+  - sudo apt-get install texinfo
 script:
   - make dependencies
   - make build
