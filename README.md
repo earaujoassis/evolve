@@ -20,13 +20,40 @@ algorithm*. In: *Evolutionary Algorithms*, p. 57&ndash;68. InTech, 2011.)
 * Random keys representation scheme (BEAN, J. C. *Genetic Algorithms and Random Keys for Sequencing and
 Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
+## Try it!
+
+0. Clone this repo
+
+   ```sh
+   $ git clone git@github.com:earaujoassis/evolve.git
+   ```
+
+1. Install build dependencies
+
+   ```sh
+   $ sudo apt-get install build-essential texinfo
+   ```
+
+2. Build Evolve's dependencies and Evolve's library (all static libraries)
+
+   ```sh
+   $ make dependencies && make build
+   ```
+
+3. Build and run an example for the Multidimensional 0-1 Knapsack Problem
+
+   ```sh
+   $ make examples
+   $ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
+   ```
+
 ## Paradigms and Metaheuristics implemented by include file
 
 * EV (evolve_ev.h)
-* Canonical Genetic Algorithm (evolve_ga.h)
-* Genetic Algorithm with IVF (In Vitro Fertilization) (evolve_ivfga.h)
-* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve_ivfrkgaes.h)
-* Random-key Genetic Algorithm/Evolution Strategy (evolve_rkgaes.h)
+* Canonical Genetic Algorithm (evolve/evolve_ga.h)
+* Genetic Algorithm with IVF (In Vitro Fertilization) (evolve/evolve_ivfga.h)
+* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/evolve_ivfrkgaes.h)
+* Random-key Genetic Algorithm/Evolution Strategy (evolve/evolve_rkgaes.h)
 
 ## Dependencies (available on this package)
 
