@@ -1,4 +1,4 @@
-# Evolve
+# Evolve ![Travis-CI status](https://travis-ci.org/earaujoassis/evolve.svg?branch=master "Travis-CI status")
 
 > A library for Evolutionary Computation algorithms
 
