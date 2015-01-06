@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,10 +20,7 @@
 #include "evolve_repr_real.h"
 #include "evolve_repr_integer.h"
 #include "evolve_stats.h"
-
-#ifndef GENES_OUTPUT_LIMIT
-#define GENES_OUTPUT_LIMIT      10
-#endif
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
