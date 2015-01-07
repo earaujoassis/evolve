@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,14 +19,11 @@
 
 #include "evolve_repr_real.h"
 #include "evolve_permutation.h"
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef MUTATION_RATE
-#define MUTATION_RATE      0.150
-#endif
 
 void
 evolve_real_delta_mutation (evolve_real_chrom_t *chrom,

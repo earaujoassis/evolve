@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,20 +21,11 @@
 
 #include "evolve_repr_real.h"
 #include "evolve_stats.h"
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef IVFGA_SUPER_PARENTS
-#define IVFGA_SUPER_PARENTS             population->size * 0.25
-#endif
-#ifndef IVFGA_CUTOFFS_UP_BOUND
-#define IVFGA_CUTOFFS_UP_BOUND          0.3
-#endif
-#ifndef IVFGA_CUTOFFS_BOTTOM_BOUND
-#define IVFGA_CUTOFFS_BOTTOM_BOUND      0.2
-#endif
 
 evolve_real_chrom_t **
 evolve_ivfrkgaes_pselection (evolve_real_pop_t *population,

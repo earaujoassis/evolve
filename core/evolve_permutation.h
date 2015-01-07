@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,23 +16,11 @@
 #define __evolve_permutation_h__
 
 #include "evolve_repr_real.h"
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef PROB_EXCHANGE
-#define PROB_EXCHANGE           35.0 // %
-#endif
-#ifndef PROB_INSERTION
-#define PROB_INSERTION          35.0 // %
-#endif
-#ifndef PROB_INVERSION
-#define PROB_INVERSION          10.0 // %
-#endif
-#ifndef PROB_SHIFTING
-#define PROB_SHIFTING           20.0 // %
-#endif
 
 void
 evolve_inversion_operator (evolve_real_chrom_t *chrom);

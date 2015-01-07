@@ -11,4 +11,4 @@ To test the web page locally, run `$ jekyll serve` and open the browser in http:
 
 ## License
 
-Code under [MIT License](http://ewerton-araujo.mit-license.org/). Copyright 2014 &copy; Ewerton Assis.
+Code under [MIT License](http://earaujoassis.mit-license.org/) &copy; Ewerton Assis

@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,17 +21,11 @@
 
 #include "evolve_repr_real.h"
 #include "evolve_stats.h"
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef TOURNAMENT_SIZE
-#define TOURNAMENT_SIZE         5
-#endif
-#ifndef REGENERATED_PERCENTAGE
-#define REGENERATED_PERCENTAGE  0.20
-#endif
 
 void
 evolve_random_generated_individuals (evolve_real_pop_t *population,

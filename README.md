@@ -67,4 +67,4 @@ are based upon instances available on scientific literature; thus those instance
 this *LICENSE*; they have their own copyright and license for distribution – the same applies to projects
 located inside the `deps` folder.
 
-Apache License, Version 2.0. Copyright 2011-2014 &copy; Ewerton Assis.
+Apache License, Version 2.0. Copyright 2011-2015 &copy; Ewerton Assis.

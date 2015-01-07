@@ -1,4 +1,4 @@
-// Copyright 2011-2014 Ewerton Assis
+// Copyright 2011-2015 Ewerton Assis
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,17 +21,11 @@
 
 #include "evolve_repr_integer.h"
 #include "evolve_stats.h"
+#include "evolve_defaults.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-
-#ifndef IVFGA_DEFAULT_XOVER_POINTS
-#define IVFGA_DEFAULT_XOVER_POINTS      10
-#endif
-#ifndef IVFGA_SUPER_PARENTS
-#define IVFGA_SUPER_PARENTS             population->size * 0.5
-#endif
 
 evolve_int_chrom_t **
 evolve_ivfga_pselection (evolve_int_pop_t *population,
