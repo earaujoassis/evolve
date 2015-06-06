@@ -37,7 +37,8 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 2. Build Evolve's dependencies and Evolve's library (all static libraries)
 
    ```sh
-   $ make dependencies && make build
+   $ make dependencies
+   $ make build
    ```
 
 3. Build and run an example for the Multidimensional 0-1 Knapsack Problem
@@ -59,6 +60,15 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
  * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/)
  * [Jansson](http://www.digip.org/jansson/)
+
+## Working with the Web Server
+
+    ```sh
+    $ cd front
+    $ virtualenv venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt
+    ```
 
 ## License
 
