@@ -22,29 +22,29 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
 0. Clone this repo
 
-   ```sh
-   $ git clone git@github.com:earaujoassis/evolve.git
-   ```
+```sh
+$ git clone git@github.com:earaujoassis/evolve.git
+```
 
 1. Install build dependencies
 
-   ```sh
-   $ sudo apt-get install build-essential texinfo
-   ```
+```sh
+$ sudo apt-get install build-essential texinfo
+```
 
 2. Build Evolve's dependencies and Evolve's library (all static libraries)
 
-   ```sh
-   $ make dependencies
-   $ make build
-   ```
+```sh
+$ make dependencies
+$ make build
+```
 
 3. Build and run an example for the Multidimensional 0-1 Knapsack Problem
 
-   ```sh
-   $ make examples
-   $ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
-   ```
+```sh
+$ make examples
+$ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
+```
 
 ## Paradigms and Metaheuristics implemented by include file
 
@@ -61,12 +61,12 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
 ## Working with the Web Server (Evolve's front)
 
-    ```sh
-    $ cd front
-    $ virtualenv venv
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    ```
+```sh
+$ cd front
+$ virtualenv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+```
 
 ## License
 
