@@ -2,8 +2,6 @@
 
 > A library for Evolutionary Computation algorithms
 
-**WARNING**: CURRENTLY NOT READY FOR USE.
-
 Evolve is a C library for metaheuristics algorithms. They are: genetic algorithm, In Vitro Fertilization
 genetic algorithm (IVF-GA), ev (a very simple metaheuristic introduced in *Evolutionary Computation*, by
 Kenneth De Jong), and some implementation stubs. The metaheuristics implemented are:
@@ -61,7 +59,7 @@ Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
  * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/)
  * [Jansson](http://www.digip.org/jansson/)
 
-## Working with the Web Server
+## Working with the Web Server (Evolve's front)
 
     ```sh
     $ cd front
