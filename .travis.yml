@@ -11,3 +11,5 @@ script:
   - git submodule update
   - make dependencies
   - make build
+  - make examples
+  - build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
