@@ -39,5 +39,7 @@ main (int argc, char **argv)
   del_real_pop_indiv (population);
   del_real_pop (population);
   del_salesman (problem);
+
+  return 0;
 }
 

@@ -98,4 +98,6 @@ main (int argc, char **argv)
 
       del_knapsack (problem);
     }
+
+  return 0;
 }

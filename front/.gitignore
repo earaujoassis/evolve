@@ -1,0 +1,4 @@
+venv
+*_local.*
+*.local.*
+local.*

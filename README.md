@@ -2,54 +2,48 @@
 
 > A library for Evolutionary Computation algorithms
 
-**WARNING**: CURRENTLY NOT READY FOR USE.
-
 Evolve is a C library for metaheuristics algorithms. They are: genetic algorithm, In Vitro Fertilization
 genetic algorithm (IVF-GA), ev (a very simple metaheuristic introduced in *Evolutionary Computation*, by
-Kenneth De Jong), and some implementation stubs. The metaheuristics implemented are:
-
-* Genetic algorithms (DE JONG, K. *Evolutionary Computation: a unified approach*. MIT Press, Cambridge,
-2006.)
-
-* EV, a simple evolutionary algorithm (DE JONG, K. *Evolutionary Computation: a unified approach*. MIT
-Press, Cambridge, 2006.)
-
-* IVF-GA, a hybrid genetic algorithm (CAMILO-JUNIOR, C. G.; YAMANAKA, K. *In vitro fertilization genetic
-algorithm*. In: *Evolutionary Algorithms*, p. 57&ndash;68. InTech, 2011.)
-
-* Random keys representation scheme (BEAN, J. C. *Genetic Algorithms and Random Keys for Sequencing and
-Optimization*. *ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
+Kenneth De Jong), and some implementation stubs. The metaheuristics implemented are **Genetic algorithms**
+(DE JONG, K. *Evolutionary Computation: a unified approach*. MIT Press, Cambridge, 2006.); **EV**, a simple
+evolutionary algorithm (DE JONG, K. *Evolutionary Computation: a unified approach*. MIT Press, Cambridge,
+2006.); **IVF-GA**, a hybrid genetic algorithm (CAMILO-JUNIOR, C. G.; YAMANAKA, K. *In vitro fertilization
+genetic algorithm*. In: *Evolutionary Algorithms*, p. 57&ndash;68. InTech, 2011.); and the **Random keys
+representation scheme** (BEAN, J. C. *Genetic Algorithms and Random Keys for Sequencing and Optimization*.
+*ORSA Journal on Computing*, 6:154&ndash;160, 1994.)
 
 ## Try it!
 
-0. Clone this repo
+0. Clone this repo and load its submodules
 
-   ```sh
-   $ git clone git@github.com:earaujoassis/evolve.git
-   ```
+```sh
+$ git clone git@github.com:earaujoassis/evolve.git
+$ git submodule update --init --recursive
+```
 
 1. Install build dependencies
 
-   ```sh
-   $ sudo apt-get install build-essential texinfo
-   ```
+```sh
+$ sudo apt-get install build-essential texinfo
+```
 
 2. Build Evolve's dependencies and Evolve's library (all static libraries)
 
-   ```sh
-   $ make dependencies && make build
-   ```
+```sh
+$ make dependencies
+$ make build
+```
 
 3. Build and run an example for the Multidimensional 0-1 Knapsack Problem
 
-   ```sh
-   $ make examples
-   $ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
-   ```
+```sh
+$ make examples
+$ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
+```
 
 ## Paradigms and Metaheuristics implemented by include file
 
-* EV (evolve_ev.h)
+* EV (evolve/evolve_ev.h)
 * Canonical Genetic Algorithm (evolve/evolve_ga.h)
 * Genetic Algorithm with IVF (In Vitro Fertilization) (evolve/evolve_ivfga.h)
 * Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/evolve_ivfrkgaes.h)

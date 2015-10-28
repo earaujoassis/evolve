@@ -1,0 +1,4 @@
+[submodule "deps/gsl"]
+  path = deps/gsl
+  url = git@github.com:earaujoassis/gsl.git
+  ignore = dirty
