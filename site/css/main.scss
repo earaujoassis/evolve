@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -27,8 +25,6 @@ $content-width:    90%;
 $on-palm:          90%;
 $on-laptop:        90%;
 
-
-
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -42,10 +38,5 @@ $on-laptop:        90%;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout"
-;
+@import "base", "layout";
