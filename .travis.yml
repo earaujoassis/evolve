@@ -12,10 +12,7 @@ before_install:
 install:
   - sudo apt-get install texinfo
 script:
-  - git submodule init
-  - git submodule update
   - make dependencies
   - make build
-  - ls -la build/deps/lib/
   - make examples
   - build/examples/knapsack examples/knapsack/instances/mknapcb0.txt

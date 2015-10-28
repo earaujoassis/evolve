@@ -18,6 +18,7 @@ representation scheme** (BEAN, J. C. *Genetic Algorithms and Random Keys for Seq
 
 ```sh
 $ git clone git@github.com:earaujoassis/evolve.git
+$ git submodule update --init --recursive
 ```
 
 1. Install build dependencies
