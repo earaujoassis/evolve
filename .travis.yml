@@ -16,5 +16,6 @@ script:
   - git submodule update
   - make dependencies
   - make build
+  - ls -la build/deps/lib/
   - make examples
   - build/examples/knapsack examples/knapsack/instances/mknapcb0.txt

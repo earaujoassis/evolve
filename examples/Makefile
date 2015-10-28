@@ -10,7 +10,7 @@ EXAMPLESPATH=$(BUILDPATH)/examples
 
 CC=gcc
 CC_INCLUDES=-I$(DEPPATH)/include -I$(INCLUDEPATH)
-CC_LIBRARIES=-L$(LIBPATH) -L$(DEPPATH)/lib -lgsl -lgslcblas -lm -levolve
+CC_LIBRARIES=-L$(DEPPATH)/lib -L$(LIBPATH) -lgsl -lgslcblas -lm -levolve
 
 .PHONY: all default clean
 
