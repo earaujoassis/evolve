@@ -2,3 +2,7 @@
   path = deps/gsl
   url = git@github.com:earaujoassis/gsl.git
   ignore = dirty
+[submodule "deps/proto"]
+  path = deps/proto
+  url = git@github.com:earaujoassis/proto.git
+  ignore = dirty

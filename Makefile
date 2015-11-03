@@ -1,6 +1,6 @@
 # Top-level Makefile
 
-.PHONY: dependencies build examples default clean all
+.PHONY: dependencies build examples tests default clean all
 
 dependencies:
 	mkdir -p build
@@ -17,6 +17,10 @@ build:
 examples:
 	mkdir -p build/examples
 	$(MAKE) -C examples
+
+tests:
+	mkdir -p tests/bin
+	$(MAKE) -C tests
 
 all: dependencies build
 
