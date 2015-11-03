@@ -6,22 +6,19 @@ Evolve is a C library for metaheuristics algorithms. They are: genetic algorithm
 genetic algorithm (IVF-GA), ev (a very simple metaheuristic introduced in *Evolutionary Computation*, by
 Kenneth De Jong), and some other implementation stubs.
 
-## Try it!
+## Setup & Running
 
-0. Clone this repo and load its submodules
+Clone this project and load its submodules
 
 ```sh
 $ git clone git@github.com:earaujoassis/evolve.git
 $ git submodule update --init --recursive
 ```
 
-1. Install build dependencies
+Install build dependencies: on Linux/Ubuntu systems it would be something like `$ sudo apt-get install build-essential texinfo`;
+on other systems, please make sure to have GCC, Texinfo and The Autotools installed.
 
-```sh
-$ sudo apt-get install build-essential texinfo
-```
-
-2. Build Evolve's dependencies and Evolve's library (all static libraries)
+Build Evolve's dependencies and Evolve's library (all static libraries)
 
 ```sh
 $ make dependencies
@@ -33,6 +30,15 @@ $ make build
 ```sh
 $ make examples
 $ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
+```
+
+## Testing
+
+Install Valgrind prior to running any further command. Also, make sure to build the library following
+previous steps.
+
+```sh
+$ make tests
 ```
 
 ## Paradigms and Metaheuristics implemented by include file
