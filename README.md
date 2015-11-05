@@ -20,15 +20,15 @@ $ make install
 ## Running the examples
 
 ```sh
-autoreconf -i
-mkdir -p build
-CPPFLAGS=-I$PWD/build/include LDFLAGS=-L$PWD/lib ./configure --prefix=$PWD/build --disable-shared
-make thirdparty
-make
-make install
-make examples
-examples/bin/2d-parabola
-examples/bin/m-01-knapsack examples/m-01-knapsack-instance.txt
+$ autoreconf -i
+$ mkdir -p build
+$ CPPFLAGS=-I$PWD/build/include LDFLAGS=-L$PWD/lib ./configure --prefix=$PWD/build --disable-shared
+$ make thirdparty
+$ make
+$ make install
+$ make examples
+$ examples/bin/2d-parabola
+$ examples/bin/m-01-knapsack examples/m-01-knapsack-instance.txt
 ```
 
 ## Testing
@@ -58,6 +58,6 @@ $ make tests
 Please refer to the included *LICENSE file* for terms of use. Some examples used to showcase this project
 are based upon instances available on scientific literature; thus those instances should be disregarded of
 this *LICENSE*; they have their own copyright and license for distribution – the same applies to projects
-located inside the `deps` folder.
+located inside the `thirdparty` folder.
 
 Apache License, Version 2.0. Copyright 2011-2015 &copy; Ewerton Assis.
