@@ -17,3 +17,10 @@ indent_size = 4
 [Makefile*]
 indent_size = 4
 indent_style = tab
+
+[*.def]
+indent_size = 4
+
+[*.txt]
+insert_final_newline = false
+trim_trailing_whitespace = false
