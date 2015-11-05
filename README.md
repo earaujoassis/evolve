@@ -6,36 +6,35 @@ Evolve is a C library for metaheuristics algorithms. They are: genetic algorithm
 genetic algorithm (IVF-GA), ev (a very simple metaheuristic introduced in *Evolutionary Computation*, by
 Kenneth De Jong), and some other implementation stubs.
 
-## Setup & Running
+## Build & Install
 
-Clone this project and load its submodules
+You must install Autotools before attempting to build & install it.
 
 ```sh
-$ git clone git@github.com:earaujoassis/evolve.git
-$ git submodule update --init --recursive
+$ autoreconf -i
+$ ./configure
+$ make
+$ make install
 ```
 
-Install build dependencies: on Linux/Ubuntu systems it would be something like `$ sudo apt-get install build-essential texinfo`;
-on other systems, please make sure to have GCC, Texinfo and The Autotools installed.
-
-Build Evolve's dependencies and Evolve's library (all static libraries)
+## Running the examples
 
 ```sh
-$ make dependencies
-$ make build
-```
-
-3. Build and run an example for the Multidimensional 0-1 Knapsack Problem
-
-```sh
-$ make examples
-$ build/examples/knapsack examples/knapsack/instances/mknapcb0.txt
+autoreconf -i
+mkdir -p build
+CPPFLAGS=-I$PWD/build/include LDFLAGS=-L$PWD/lib ./configure --prefix=$PWD/build --disable-shared
+make thirdparty
+make
+make install
+make examples
+examples/bin/2d-parabola
+examples/bin/m-01-knapsack examples/m-01-knapsack-instance.txt
 ```
 
 ## Testing
 
 Install Valgrind prior to running any further command. Also, make sure to build the library following
-previous steps.
+previous steps for running the examples.
 
 ```sh
 $ make tests
@@ -46,13 +45,13 @@ $ make tests
 * EV (evolve/evolve_ev.h)
 * Canonical Genetic Algorithm (evolve/evolve_ga.h)
 * Genetic Algorithm with IVF (In Vitro Fertilization) (evolve/evolve_ivfga.h)
-* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/evolve_ivfrkgaes.h)
+* Random-key Genetic Algorithm/Evolution Strategy with IVF (In Vitro Fertilization) (evolve/evolve_rkivfgaes.h)
 * Random-key Genetic Algorithm/Evolution Strategy (evolve/evolve_rkgaes.h)
 
 ## Dependencies (available on this package)
 
+ * [Proto](https://github.com/earaujoassis/proto)
  * [GSL (GNU Scientific Library)](http://www.gnu.org/software/gsl/)
- * [Jansson](http://www.digip.org/jansson/)
 
 ## License
 
